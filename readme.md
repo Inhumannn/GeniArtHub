@@ -17,7 +17,7 @@
 
 ## Architecture de GeniArtHub
 
-Le site web GeniArtHub est spécialisé dans la vente d'œuvres d'art réalisées par intelligence artificielle. Le site se compose de 4 pages spécifiques.
+Le site web GeniArtHub est spécialisé dans la vente d'œuvres d'art réalisées par intelligence artificielle. Le site se compose de 3 ou 4 pages spécifiques.
 
 ### La page d'accueil
 
