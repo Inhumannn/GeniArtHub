@@ -3,52 +3,69 @@
 <head>
    <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <link rel="stylesheet" href="style.css">
+   <link rel="stylesheet" href="css/style.css">
    <title>Cart</title>
 </head>
-<body>
-   <header>
-      <div>
-          <img src="img/logo-black.png" alt="Logo GeniArtHub version sombre">
+<body id="page-cart">
+   <header id="header">
+      <div class="header__logo-container">
+          <a href="index.html"><img src="img/logo-black.png" alt="Logo GeniArtHub version sombre"></a>
           <a href="cart.html"><img src="img/cart.svg" alt="Aller au panier"></a>
       </div>
       <section class="products">
       </section>
   </header>
-  <main>
+  <main id="content">
    <h1>Votre panier</h1>
-   <hr>
-   <section>
-      <article>
-         <img src="" alt="image">
+   <hr class="line">
+   <section id="shop-container">
+      <article id="shop">
+         <img src="img/01.png" alt="image">
          <h2>Titre de l'image</h2>
          <p>Format 40x30</p>
+         <p>Prix 35.99€</p>
          <p>quantité</p>
          <a href="#">Supprimer</a>
       </article>
+      <div id="container-prix">
+         <h3>Total de la commande</h3>
+         <p>N article pour un montant de X€</p>
+      </div>
    </section>
-   <hr>
-   <section>
+   <hr class="line">
+   <section id="formulaire-container">
       <h2>Formulaire de commande</h2>
-      <hr>
-      <form action="#">
-         <label for="fistname">Prénom :</label>
-         <input type="text" name="fistname" id="fistname">
-         <label for="lastname">Nom :</label>
-         <input type="text" name="lastname" id="lastname">
-         <label for="address">Adresse :</label>
-         <input type="text" name="address" id="address">
-         <label for="city">Ville : </label>
-         <input type="text" name="city" id="city">
-         <label for="mail">E-mail :</label>
-         <input type="email" name="mail" id="mail">
-         <input type="submit" value="Passer commande">
+      <hr class="line">
+      <form action="#" id="formulaire">
+         <div class="form">
+            <label for="fistname">Prénom :</label>
+            <input type="text" name="fistname" id="fistname">
+         </div>
+         <div class="form">
+            <label for="lastname">Nom :</label>
+            <input type="text" name="lastname" id="lastname">
+         </div>
+         <div class="form">
+            <label for="address">Adresse :</label>
+            <input type="text" name="address" id="address">
+         </div>
+         <div class="form">
+            <label for="city">Ville : </label>
+            <input type="text" name="city" id="city">
+         </div>
+         <div class="form">
+            <label for="mail">E-mail :</label>
+            <input type="email" name="mail" id="mail">
+         </div>
       </form>
+      <div id="btn-commande-container">
+         <input type="submit" value="Passer commande" id="btn-commande">
+      </div>
    </section>
   </main>
    <footer>
       <p><a href="https://www.errantecreation.com/">Errante Creation</a> © 2023 - GeniArtHub</p>
    </footer>
-   <script src=""></script>
+   <script src="js/cart.js"></script>
 </body>
 </html>

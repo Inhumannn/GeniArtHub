@@ -1,20 +1,25 @@
 @import url('https://fonts.googleapis.com/css2?family=Rum+Raisin&family=Source+Sans+3:wght@400;900&display=swap');
+
 html {
     --scroll-behavior: smooth;
     scroll-behavior: smooth;
 }
-.row {
+
+/* Style pour la page d'accueil */
+#page-index .row {
     max-width: 1440px;
     margin:auto;
     width: 100%;
 }
-header {
+
+#page-index header {
     background-color: black;
     height:125px;
     display: flex;
     align-items: center;
 }
-.hero {
+
+#page-index .hero {
     background: #000;
     margin:0;
     min-height: calc(100vh - 125px);
@@ -23,7 +28,8 @@ header {
     background-repeat: no-repeat;
     background-size: cover;
 }
-.hero h1 {
+
+#page-index .hero h1 {
     margin: 0;
     padding:0;
     color: #FFF;
@@ -35,7 +41,7 @@ header {
     line-height: normal;
 }
 
-.hero a {
+#page-index .hero a {
     background: #EE7F43;
     display: inline-block;
     color:#FFF;
@@ -50,45 +56,49 @@ header {
     margin-top: 50px;
 }
 
-.hero .row {
+#page-index .hero .row {
     text-align: center;
 }
 
-.productlist {
+#page-index .productlist {
     max-width: 1440px;
     margin:auto;
     text-align: center;
 }
-.productlist > div {
+
+#page-index .productlist > div {
     position:relative;
 }
-.productlist > div > img {
+
+#page-index .productlist > div > img {
     margin:78px 0;
 }
-.productlist > div > a {
+
+#page-index .productlist > div > a {
     position: absolute;
     top: 50%;
     right: 0;
 }
 
-.productlist .products {
+#page-index .productlist .products {
     display:grid;
     grid-template-columns: repeat(3, 1fr);
     gap:30px;
     row-gap: 57px;
 }
 
-.products img {
+#page-index .products img {
     width:100%;
 }
 
-.products article {
+#page-index .products article {
     position: relative;
     display: flex;
     align-items: flex-end;
     justify-content: center;
 }
-.products article a {
+
+#page-index .products article a {
     background: #EE7F43;
     display: inline-block;
     color:#FFF;
@@ -105,77 +115,83 @@ header {
     bottom: -30px;
 }
 
-footer {
+#page-index footer {
     margin-top: 100px;
     background:#000;
     text-align: center;
     color:#FFF;
     padding:20px 0;
 }
-footer p {
+
+#page-index footer p {
     font-family: 'Source Sans 3', sans-serif;
     font-size: 22px;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
 }
-footer a {
+
+#page-index footer a {
     color:#fff;
     text-decoration: none;
 }
 
-.page header {
+/* Style pour la page d'œuvre */
+#page-product header {
     background-color: #fff;
     margin: auto;
     max-width: 1440px;
     height:auto;
     margin:41px auto 80px auto;
-   
 }
-.page header div {
+
+#page-product header div {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.page header div {
+#page-product header div {
     position:relative;
     width: 100%;
 }
-.page header a:nth-child(2) {
+
+#page-product header a:nth-child(2) {
     position:absolute;
     top:50%;
     right:0;
 }
 
-.detailoeuvre {
+#page-product .detailoeuvre {
     max-width: 1440px;
     margin:auto;
 }
 
-.detailoeuvre article {
+#page-product .detailoeuvre article {
     display:grid; 
     grid-template-columns: repeat(2, 1fr);
     gap:85px;
 }
 
-figure {
+#page-product figure {
     margin: 0;
     padding: 0;
 }
-.detailoeuvre img {
+
+#page-product .detailoeuvre img {
     width:100%;
     height:100%;
     object-fit: cover;
 }
-.detailoeuvre article > div {
+
+#page-product .detailoeuvre article > div {
     background-color: #F3F3F3;
     width: 100%;
     text-align: center;
 }
 
-.detailoeuvre h1,
-.detailoeuvre h2 {
+#page-product .detailoeuvre h1,
+#page-product .detailoeuvre h2 {
     color: #000;
     text-align: center;
     font-family: 'Rum Raisin', sans-serif;
@@ -185,7 +201,7 @@ figure {
     line-height: normal;
 }
 
-.detailoeuvre article p {
+#page-product .detailoeuvre article p {
     color: #000;
     font-family: 'Source Sans 3', sans-serif;
     font-size: 16px;
@@ -195,10 +211,12 @@ figure {
     max-width: 80%;
     margin: auto;
 }
-div.price  {
+
+#page-product div.price  {
     margin-bottom: 80px;
 }
-article > div > div.price > p {
+
+#page-product article > div > div.price > p {
     margin: auto;
     margin-top: 80px;
     text-align: center;
@@ -209,7 +227,8 @@ article > div > div.price > p {
     font-weight: 400;
     line-height: normal;
 }
-.detailoeuvre .price .showprice {
+
+#page-product .detailoeuvre .price .showprice {
     display:block;
     text-align: center;
     font-family: 'Source Sans 3', sans-serif;
@@ -219,11 +238,11 @@ article > div > div.price > p {
     font-weight: 400;
     line-height: normal;
 }
-.declinaison input {
+
+#page-product .declinaison input {
     border: 1px solid #EE7F43;
     font-family: 'Source Sans 3', sans-serif;
     height:66px;
-    /* width:83px; */
     background-color: transparent;
     text-align: center;
     font-size: 32px;
@@ -232,7 +251,8 @@ article > div > div.price > p {
     line-height: normal;
     padding: 0;
 }
-.declinaison select {
+
+#page-product .declinaison select {
     border: 1px solid #EE7F43;
     font-family: 'Source Sans 3', sans-serif;
     height:66px;
@@ -242,16 +262,17 @@ article > div > div.price > p {
     font-style: normal;
     font-weight: 400;
     line-height: normal;
-
 }
-.declinaison {
+
+#page-product .declinaison {
     display:grid;
     grid-template-columns: 25% auto;
     width:80%;
     gap: 24px;
     margin:auto;
 }
-.button-buy {
+
+#page-product .button-buy {
     color: #FFF;
     text-align: center;
     font-family: 'Source Sans 3', sans-serif;
@@ -266,15 +287,123 @@ article > div > div.price > p {
     display: inline-block;
     margin-top: 24px;
 }
-.detailoeuvre h2 {
+
+#page-product .detailoeuvre h2 {
     margin-top: 50px;
 }
 
-.detailoeuvre aside {
+#page-product .detailoeuvre aside {
     color: #000;
     font-family: 'Source Sans 3', sans-serif;
     font-size: 24px;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
+}
+#page-product footer {
+    margin-top: 100px;
+    background:#000;
+    text-align: center;
+    color:#FFF;
+    padding:20px 0;
+}
+
+#page-product footer p {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+#page-product footer a {
+    color:#fff;
+    text-decoration: none;
+}
+/* Utilisation de BEM */
+#page-cart{
+    font-family: 'Source Sans 3', sans-serif;
+    #header{
+        .header__logo-container{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+    #content{
+        h1{
+            font-family: 'Rum Raisin', sans-serif;
+            font-size: 36px;
+            font-weight: 400;
+            text-align: center;
+            padding-top: 20px;
+        }
+        .line{
+            width: 1396px;
+            height: 1px;
+            color: #EE7F43;
+        }
+        #shop-container{
+            max-width: 1440px;
+            margin: auto;
+            #shop{
+                display: grid;
+                grid-template-columns: repeat(6, 1fr);
+                align-items: center;
+                text-align: center;
+                justify-items: center;
+                img{
+                    width: 180px;
+                }
+            }
+        }
+        #container-prix{
+            text-align: end;
+        }
+        #formulaire-container{
+            max-width: 1440px;
+            margin: auto;
+            h2{
+                font-family: 'Rum Raisin', sans-serif;
+                font-weight: 400;
+                text-align: center;
+                padding-top: 20px;
+                font-size: 34px;
+            }
+            #formulaire{
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                gap: 20px;
+
+                .form{
+                    display: flex;
+                    flex-direction: column;
+                    label{
+                        font-size: 22px;
+                    }
+                }
+            }
+            #btn-commande-container{
+                text-align: center;
+            }
+        }
+    }
+    footer{
+        margin-top: 100px;
+        background:#000;
+        text-align: center;
+        color:#FFF;
+        padding:20px 0;
+        p {
+            font-family: 'Source Sans 3', sans-serif;
+            font-size: 22px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+        }
+        a {
+            color:#fff;
+            text-decoration: none;
+        }
+    }
 }
