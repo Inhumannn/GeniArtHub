@@ -1,12 +1,3 @@
-// localStorge.setItem(key, value); // Ajout
-// const ... localStorage.getItem('...'); // Afficher
-// localStorage.removeItem('...'); // Supression
-// const user = {nom: "Dupont", prenom: "Jacks"}; // 1. Stocker
-// localStorage.setItem("user", JSON.stringify(user)); // 2. Sérialisation
-// const monObjet = localStorage.getItem("user"); // 3. Désérialiser
-// const monObjetParse = JSON.parse(monObjet); // 3. Désérialiser
-// const{om, prenom} = monObjetParse; // 4. Détructuration
-// console.log(nom, prenom); // Affichage dans ma console
 async function init(){
    const products = await getDatas();
    displayProducts(products)
