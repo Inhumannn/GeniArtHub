@@ -1,10 +1,10 @@
 async function init(){
    const products = await getDatas();
-   console.log("Valeur id :",products)
+   console.log("Valeur id :", products)
    displayProducts(products)  
 };
 init();
-let products = []
+const products = []
 async function getDatas(){
    try{
       const params = new URL(document.location).searchParams;
@@ -29,14 +29,16 @@ function displayProducts(products){
       document.querySelector('#description1').textContent = descriptionCourte;
       document.querySelector('#description2').innerHTML = descriptionBr;
       document.querySelector('#image').src = image;
-      // Ligne 24 html
+      const select = document.querySelector('#format');
       declinaisons.forEach((el) =>{
-         const select = document.querySelector('#format');
          select.insertAdjacentHTML('beforeend', `
-            <option value="">${el.taille}</option>
+            <option data-price="${el.prix}" value="${el.taille}">${el.taille}</option>
             `);
-            // Faire un if
-         document.querySelector('.showprice').textContent = el.prix;
+         });
+      select.addEventListener('change', function(el){
+         const option = el.target.options[el.target.selectedIndex];
+         document.querySelector('.showprice').textContent = `${option.dataset.price}€`;
+        
       });
 };
 // localStorge.setItem(key, value); // Ajout
