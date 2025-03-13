@@ -66,7 +66,7 @@ button.addEventListener("click", (e) => {
   const quantityInput = document.querySelector("#quantity");
   const formatInput = document.querySelector("#format");
 
-  // La quantité doit être un nombre entier
+  // The quantity must be an integer
   const quantity = parseInt(quantityInput.value);
   const format = formatInput.value;
 
@@ -78,8 +78,8 @@ button.addEventListener("click", (e) => {
   }
 
   if(quantity > 100){
-      showInfos("Vous ne pouvez pas commander plus de 100 oeuvres");
-      return;
+    showInfos("Vous ne pouvez pas commander plus de 100 oeuvres");
+    return;
   }
 
   const caractereInterdits =  /[a-zA-Z]/;
