@@ -1,72 +1,76 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
+
 <head>
    <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <link rel="shortcut icon" href="img/logo-black.png" type="image/x-icon">
+   <link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css">
    <link rel="stylesheet" href="css/style.css">
-   <title>Cart</title>
+   <title>Panier - GeniArtHub</title>
 </head>
-<body id="page-cart">
-   <header id="header">
-      <div class="header__logo-container">
-          <a href="index.html"><img src="img/logo-black.png" alt="Logo GeniArtHub version sombre"></a>
-          <a href="cart.html"><img src="img/cart.svg" alt="Aller au panier"></a>
+
+<body class="page">
+   <header>
+      <div>
+         <a href="index.html">
+            <img src="img/logo-black.png" alt="Logo GeniArtHub version sombre">
+         </a>
+         <a id="carticon" href="cart.html"><img src="img/cart.svg" alt="Aller au panier"></a>
       </div>
-      <section class="products">
+   </header>
+
+   <main class="cart">
+      <section>
+         <h2>Votre Panier</h2>
+         <div id="panier">
+
+         </div>
+
+         <div class="total">
+            <h3>Total de la commande</h3>
+            <p id="total"><span id="totalarticle">0</span> articles pour un montant de <span id="montanttotal">0</span>€
+            </p>
+         </div>
       </section>
-  </header>
-  <main id="content">
-   <h1>Votre panier</h1>
-   <hr class="line">
-   <section id="shop-container">
-      <article id="shop">
-         <img src="img/01.png" alt="image">
-         <h2>Titre de l'image</h2>
-         <p>Format 40x30</p>
-         <p>Prix 35.99€</p>
-         <p>quantité</p>
-         <a href="#">Supprimer</a>
-      </article>
-      <div id="container-prix">
-         <h3>Total de la commande</h3>
-         <p>N article pour un montant de X€</p>
-      </div>
-   </section>
-   <hr class="line">
-   <section id="formulaire-container">
-      <h2>Formulaire de commande</h2>
-      <hr class="line">
-      <form action="#" id="formulaire">
-         <div class="form">
-            <label for="fistname">Prénom :</label>
-            <input type="text" name="fistname" id="fistname">
-         </div>
-         <div class="form">
-            <label for="lastname">Nom :</label>
-            <input type="text" name="lastname" id="lastname">
-         </div>
-         <div class="form">
-            <label for="address">Adresse :</label>
-            <input type="text" name="address" id="address">
-         </div>
-         <div class="form">
-            <label for="city">Ville : </label>
-            <input type="text" name="city" id="city">
-         </div>
-         <div class="form">
-            <label for="mail">E-mail :</label>
-            <input type="email" name="mail" id="mail">
-         </div>
-      </form>
-      <div id="btn-commande-container">
-         <input type="submit" value="Passer commande" id="btn-commande">
-      </div>
-   </section>
-  </main>
+
+      <section>
+         <h2>Formulaire de commande</h2>
+         <form id="command">
+            <div>
+               <div>
+                  <label for="prenom">Prénom: </label>
+                  <input type="text" name="prenom">
+               </div>
+               <div>
+                  <label for="nom">Nom: </label>
+                  <input type="text" name="nom">
+               </div>
+               <div>
+                  <label for="adresse">Adresse: </label>
+                  <input type="text" name="adresse">
+               </div>
+               <div>
+                  <label for="ville">Ville: </label>
+                  <input type="text" name="ville">
+               </div>
+               <div>
+                  <label for="mail">Email: </label>
+                  <input type="text" name="mail">
+               </div>
+            </div>
+
+            <button class="button-buy" href="#">Passer commande</button>
+         </form>
+
+
+      </section>
+   </main>
    <footer>
-      <p><a href="https://www.errantecreation.com/">Errante Creation</a> © 2023 - GeniArtHub</p>
+      <p>Errante Creation © 2023 - GeniArtHub</p>
    </footer>
+   <script src="js/showinfo.js"></script>
    <script src="js/cart.js"></script>
+   <script src="js/order.js"></script>
 </body>
+
 </html>
