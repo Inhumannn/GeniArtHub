@@ -1,5 +1,6 @@
 async function init() {
    const datas = await getDatas();
+   populateDatas(datas);
 };
 init();
 async function getDatas() {
@@ -10,29 +11,48 @@ async function getDatas() {
     throw new Error("Erreur lors de la récupération des données");
   };
 };
+function populateDatas(datas){
+  const cart = JSON.parse(localStorage.getItem('cart')) || []
+  // console.log(datas);
+
+  cart.forEach(el => {
+    const cartFull = datas.find(data => {
+      return data._id === el.id;
+    })
+
+    
+    console.log(cartFull);
+  });
+
+  const purchase = cart.find((el) => {
+    return el.id === "abc12345";
+  });
+  // console.log(purchase);
+};  
+
 
 function showInfos(message, title=""){
-   const mondal = document.createElement("dialog")
-   mondal.appendChild(document.createTextNode(message));
-   document.body.appendChild(mondal);
-   if (title){
-     mondal.setAttribute("Félicitation !", title);
-     h1.textContent = title;
-     mondal.insertBeefore(h1, mondal.firstChild)
-   }
-   mondal.showModal();
-   setTimeout(() => {
-     mondal.close();
-   }, 2000);
+  const mondal = document.createElement("dialog")
+  mondal.appendChild(document.createTextNode(message));
+  document.body.appendChild(mondal);
+  if(title){
+    mondal.setAttribute("Félicitation !", title);
+    h1.textContent = title;
+    mondal.insertBeefore(h1, mondal.firstChild)
+  };
+  mondal.showModal();
+  setTimeout(() => {
+    mondal.close();
+  }, 2000);
 
-   
-   const btnBuys = document.querySelector("#btn-commande");
-   btnBuys.addEventListener("click", (e) => {
-     e.preventDefault();
-     console.log("click");
-     if (btnBuys){
-       showInfos("Votre commande a bien été prise en compte. Numero de commande : XXXXXXXXXXXX", "Félicitation !");
-       return;
-     }
-   });
+  
+  const btnBuys = document.querySelector("#btn-commande");
+  btnBuys.addEventListener("click", (e) => {
+    e.preventDefault();
+    console.log("click");
+    if(btnBuys){
+      showInfos("Votre commande a bien été prise en compte. Numero de commande : XXXXXXXXXXXX", "Félicitation !");
+      return;
+    };
+  });
 };
