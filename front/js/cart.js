@@ -1,5 +1,6 @@
 async function init() {
    const datas = await getDatas();
+  //  console.log(datas)
    populateDatas(datas);
 };
 init();
@@ -13,21 +14,17 @@ async function getDatas() {
 };
 function populateDatas(datas){
   const cart = JSON.parse(localStorage.getItem('cart')) || []
-  // console.log(datas);
-
   cart.forEach(el => {
     const cartFull = datas.find(data => {
       return data._id === el.id;
-    })
-
-    
-    console.log(cartFull);
+    });
+    // find for seek declinaison
+    const declinaison = datas.find(data => {
+      return data.declinaison === el.format;
+    });
+    // console.log(cartFull);
+    console.log(declinaison);
   });
-
-  const purchase = cart.find((el) => {
-    return el.id === "abc12345";
-  });
-  // console.log(purchase);
 };  
 
 
